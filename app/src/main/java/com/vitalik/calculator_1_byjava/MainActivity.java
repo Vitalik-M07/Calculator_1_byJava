@@ -12,13 +12,17 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private  MediaPlayer mMediaPlayer;
-    String oldNumber;
-    String number;
+    String oldNumber="";
+    String number="";
+    String newNumber="";
+    Double result=0.0;
 
-    String operator;
+    String operator="";
     EditText editText;
     boolean isNew  = true;
     boolean isMinus = true;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buMinus: operator="-"; break;
             case R.id.buDivide: operator="/"; break;
             case R.id.buMultiply:operator="*" ; break;
+            //case R.id.buEqual:operator="=";break;
 
         }
 
@@ -156,13 +161,20 @@ public class MainActivity extends AppCompatActivity {
     }
     public void clickEqual(View view) {
         mMediaPlayer.start();
-        String newNumber = editText.getText().toString();
-
-        Double result= 0.0;
-
-        if(Double.parseDouble(newNumber) ==0  || newNumber.equals("") && operator=="/"){
+         newNumber = editText.getText().toString();
+        result= 0.0;
+        if(Double.parseDouble(newNumber) ==0 ||number.equals("") || newNumber.equals("") && operator=="/"){
             Toast.makeText(MainActivity.this, R.string.toast_massage,Toast.LENGTH_SHORT).show();
-        }else {
+        }
+        if (number==""&&newNumber==""||oldNumber==""||operator==""){
+
+           editText.setText(result+"");
+        }
+        if (operator ==""){
+            editText.setText(number);
+        }
+
+        else {
 
 
             switch (operator) {
@@ -178,7 +190,11 @@ public class MainActivity extends AppCompatActivity {
                 case "*":
                     result = Double.parseDouble(oldNumber) * Double.parseDouble(newNumber);
                     break;
+                case "=":
+                    result = 0.0;
+                    break;
             }
+
         }
         editText.setText(result+"");
 
@@ -187,6 +203,16 @@ public class MainActivity extends AppCompatActivity {
     public void asClick(View view) {
         mMediaPlayer.start();
         editText.setText("0");
+         oldNumber="";
+         number="";
+         newNumber="";
+         result=0.0;
+
+         operator="";
+
+
+
+
         isNew = true;
     }
     public boolean dotIsPresent(String number){
