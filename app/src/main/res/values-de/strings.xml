@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Taschenrechner</string>
+    <string name="toast_massage">Es ist unmöglich, durch Null zu teilen</string>
+
+</resources>

@@ -16,13 +16,10 @@ public class MainActivity extends AppCompatActivity {
     String number="";
     String newNumber="";
     Double result=0.0;
-
     String operator="";
     EditText editText;
     boolean isNew  = true;
     boolean isMinus = true;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -163,17 +160,18 @@ public class MainActivity extends AppCompatActivity {
         mMediaPlayer.start();
          newNumber = editText.getText().toString();
         result= 0.0;
-        if(Double.parseDouble(newNumber) ==0 ||number.equals("") || newNumber.equals("") && operator=="/"){
+        //if(Double.parseDouble(newNumber) ==0 && operator=="/" /*number.equals("")*/|| newNumber.equals("") && operator=="/"){
+        if((Double.parseDouble(newNumber) ==0 ||newNumber.equals("") )&& operator=="/"){
             Toast.makeText(MainActivity.this, R.string.toast_massage,Toast.LENGTH_SHORT).show();
         }
-        if (number==""&&newNumber==""||oldNumber==""||operator==""){
+       /*if (number==""&&newNumber==""||oldNumber==""||operator==""){
 
            editText.setText(result+"");
-        }
-        if (operator ==""){
+        }*/
+       /* if (operator ==""){
             editText.setText(number);
         }
-
+*/
         else {
 
 
