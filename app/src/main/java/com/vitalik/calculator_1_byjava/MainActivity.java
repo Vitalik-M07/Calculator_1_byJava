@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     boolean isNew  = true;
     boolean isMinus = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
