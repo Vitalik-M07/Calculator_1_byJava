@@ -233,6 +233,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     private boolean minusIsPresent(String number) {
         if(number.charAt(0)=='-'){
             return true;
