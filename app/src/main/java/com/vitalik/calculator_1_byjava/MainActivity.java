@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private  MediaPlayer mMediaPlayer;
     String oldNumber="";
     String number="";
+    String tyu;
     String newNumber="";
     Double result=0.0;
 
