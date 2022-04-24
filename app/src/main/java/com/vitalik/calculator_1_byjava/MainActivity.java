@@ -14,11 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private  MediaPlayer mMediaPlayer;
     String fgh;
     String oldNumber="";
-
-
-
-
-
     String number="";
 
 
