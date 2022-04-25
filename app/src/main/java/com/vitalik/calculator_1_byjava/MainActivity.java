@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     String newNumber="";
     Double result=0.0;
 
+
+
     String operator="";
     EditText editText;
     boolean isNew  = true;
