@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
     String tyu;
     String newNumber="";
     Double result=0.0;
