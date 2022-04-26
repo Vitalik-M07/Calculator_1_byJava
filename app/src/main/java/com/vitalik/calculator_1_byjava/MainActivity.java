@@ -15,16 +15,10 @@ public class MainActivity extends AppCompatActivity {
     String fgh;
     String oldNumber="";
     String number="";
-
-
-
-
-
-
-
     String tyu;
     String newNumber="";
     Double result=0.0;
+
 
     String operator="";
     EditText editText;
